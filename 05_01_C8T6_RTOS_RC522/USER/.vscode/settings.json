@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "rc522_config.h": "c",
+        "u8g2_init.h": "c",
+        "led.h": "c",
+        "4g.h": "c",
+        "delay.h": "c",
+        "rc522_function.h": "c",
+        "oled.h": "c",
+        "bsp_sg90.h": "c",
+        "ds1302.h": "c"
+    }
+}

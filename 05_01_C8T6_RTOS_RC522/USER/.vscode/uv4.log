@@ -1,0 +1,11 @@
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\EXE\Keil_v5\ARM\ARMCC\Bin'
+Build target 'C8T6_RTOS_RC522'
+compiling main.c...
+main.c(68): warning:  #513-D: a value of type "void *" cannot be assigned to an entity of type "void (*)(u8g2_t *, struct Menu_node *)"
+      menu->function = function;
+main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=26072 RO-data=11792 RW-data=276 ZI-data=16348  
+FromELF: creating hex file...
+"..\OBJ\C8T6_RTOS_RC522.axf" - 0 Error(s), 1 Warning(s).
+Build Time Elapsed:  00:00:03
