@@ -3,6 +3,7 @@
 #include "task.h"     //FreeRTOS  任务头文件
 #include "delay.h"
 #include "usart1.h"
+#include "semphr.h"
 // C库
 #include <stdarg.h>
 #include <string.h>
@@ -20,10 +21,12 @@
 #include "oled.h"
 #include "u8g2_init.h"
 #include "u8g2.h"
+
 ////////////////////////////////////////////////////////
 #include "onenet.h"
 #include "4g.h"
 ////////////////////////////////////////////////////////
+
 extern _calendar_obj calendar;
 extern u8 write[];
 extern u8  read[];
@@ -35,6 +38,7 @@ char  LED_1_flag  =  0;
 char  LED_2_flag  =  0;
 char  LED_3_flag  =  0;
 char  beep_flag   =  0;
+SemaphoreHandle_t xSemaphore;
 ///////////////////////////////////////////////////////////////////////////////////////////////
 #define servo_1(i)     i ? TIM_SetCompare1(TIM2, 190) : TIM_SetCompare1(TIM2, 180)
 #define servo_2(i)     i ? TIM_SetCompare2(TIM2, 190) : TIM_SetCompare2(TIM2, 175)
